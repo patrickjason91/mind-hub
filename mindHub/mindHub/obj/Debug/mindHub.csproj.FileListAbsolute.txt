@@ -1,0 +1,17 @@
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\Bin\Debug\ApplicationIcon.png
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\Bin\Debug\Background.png
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\Bin\Debug\mindHub.dll
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\Bin\Debug\mindHub.pdb
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\obj\Debug\App.g.cs
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\obj\Debug\MainPage.g.cs
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\obj\Debug\mindHub.g.resources
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\obj\Debug\mindHub.dll
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\obj\Debug\mindHub.pdb
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\obj\Debug\HomePage\HomePage.g.cs
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\Bin\Debug\AppManifest.xaml
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\Bin\Debug\mindHub.xap
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\Bin\Debug\Microsoft.Phone.Controls.dll
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\Bin\Debug\Microsoft.Phone.Controls.xml
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\obj\Debug\XapCacheFile.xml
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\obj\Debug\mindHub.csprojResolveAssemblyReference.cache
+c:\users\paulv_000\documents\visual studio 2012\Projects\mindHub\mindHub\obj\Debug\NewsFeed\NewsFeed.g.cs
