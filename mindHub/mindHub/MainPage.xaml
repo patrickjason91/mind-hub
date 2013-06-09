@@ -33,8 +33,9 @@
             <TextBlock HorizontalAlignment="Left" Margin="10,282,0,0" TextWrapping="Wrap" Text="Log in to mindHub" VerticalAlignment="Top" Width="201" Foreground="#FF172A52" FontSize="24"/>
             <TextBlock HorizontalAlignment="Left" Margin="26,314,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="188" Foreground="#FF172A52" FontSize="36"/>
             <TextBlock HorizontalAlignment="Left" Margin="25,434,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="189" Foreground="#FF172A52" FontSize="36"/>
-            <TextBox x:Name="passtxt" HorizontalAlignment="Left" Height="72" Margin="25,482,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="428"/>
-            <Button Content="Log In" HorizontalAlignment="Left" Margin="293,554,0,0" VerticalAlignment="Top" Click="Button_Click" Background="#FF172A52" BorderBrush="Transparent" Foreground="#FF2094C0" Height="90" Width="153"/>
+            <Button Content="Log In" HorizontalAlignment="Left" Margin="303,546,0,0" VerticalAlignment="Top" Click="Button_Click" Background="#FF172A52" BorderBrush="Transparent" Foreground="#FF2094C0" Height="90" Width="153"/>
+            <PasswordBox x:Name="passtxt" HorizontalAlignment="Left" Margin="30,487,0,0" VerticalAlignment="Top" Width="426" MaxLength="16"/>
+            <Button Content="Sign Up" HorizontalAlignment="Left" Margin="25,546,0,0" VerticalAlignment="Top" Click="Button_Click_1" Background="{x:Null}" BorderBrush="Transparent" Foreground="#FF2094C0" Height="90" Width="153"/>
         </Grid>
     </Grid>
 

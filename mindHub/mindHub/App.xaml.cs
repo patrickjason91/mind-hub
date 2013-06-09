@@ -13,11 +13,16 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.Threading;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace mindHub
 {
     public partial class App : Application
     {
+        public static MobileServiceClient MobileService = new MobileServiceClient(
+               "https://mindhubsvc.azure-mobile.net/",
+               "vNsChBvKMTVSWAMKLoRoUUuthBLzqV46"
+           );
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>

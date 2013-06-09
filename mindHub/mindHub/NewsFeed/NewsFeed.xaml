@@ -16,7 +16,7 @@
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot">
         <Grid.Background>
-            <ImageBrush ImageSource="/HomeBG-S.jpg" Stretch="Uniform"/>
+            <ImageBrush ImageSource="/HomeBG.jpg" Stretch="Uniform"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -37,9 +37,8 @@
             	<LineBreak/>
             	<Run/>
             	<LineBreak/>
-            	<Run Text="Keep an eye out for exiting announcements and exclusive mindHub. We're also proud to feature an assortment of community-created content."/>
+            	<Run Text="Keep an eye out for exiting announcements and project collaborations from our awesome students. and exclusive mindHub. We're also proud to feature an assortment of community-created content."/>
             </TextBlock>
-
         </Grid>
     </Grid>
 

@@ -16,11 +16,10 @@
 
     <!--LayoutRoot contains the root grid where all other page content is placed-->
     <Grid x:Name="LayoutRoot">
-        <controls:Panorama Title="mindHub" Foreground="#FF172A52">
-            <controls:Panorama.Background>
-                <ImageBrush ImageSource="/HomeBG.jpg" Stretch="Uniform"/>
-            </controls:Panorama.Background>
-
+        <Grid.Background>
+            <ImageBrush ImageSource="/HomeBG-S.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <controls:Panorama Title="mindHub" Foreground="#FF172A52" x:Name="PanoramaMain" SelectionChanged="Panorama_SelectionChanged">
             <!--Panorama item one-->
             <controls:PanoramaItem Header="News feed">
                 <ListBox x:Name="newsFeedLV" HorizontalAlignment="Center" Height="498" VerticalAlignment="Top" Width="420" Background="#00E9E9EA">
@@ -39,10 +38,10 @@
                                 <TextBlock Text="{Binding TitleFeed}" Grid.Column="1" Grid.Row="0" Margin="10" FontSize="24" Foreground="#FF1B2D54"/>
                                 <TextBlock Text="{Binding Contents}" Grid.Column="2" Grid.Row="1" Margin="10" FontSize="18" Foreground="#FF1B2D54"/>
                                 <TextBlock Text="{Binding ViewAll}" Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="2" Margin="10" FontSize="24" Foreground="#FF1B2D54"/>
-                                </Grid>
+                            </Grid>
                         </DataTemplate>
-                        </ListBox.ItemTemplate>
-                        </ListBox>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </controls:PanoramaItem>
 
             <!--Panorama item two-->
@@ -67,7 +66,39 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </controls:PanoramaItem>
+            <controls:PanoramaItem Header="Projects">
+                <ListBox x:Name="projectsLV" HorizontalAlignment="Center" Height="498" VerticalAlignment="Top" Width="420" Background="#00E9E9EA">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid x:FieldModifier="ListViewGrid" Width="420" Margin="0, 0, 0, 5" Tap="Grid_Tap_1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="{Binding ProjectTitle}" FontWeight="SemiBold" Grid.Row="0" Margin="10,6" FontSize="24" Foreground="#FF1B2D54"/>
+                                <TextBlock Text="{Binding ProjectLead}" Grid.Row="1" Margin="10,6" FontSize="18" Foreground="#FF1B2D54"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </controls:PanoramaItem>
+            <!--Panorama item two-->
+            <!--<controls:PanoramaItem Header="Profile">
+                <ListBox x:Name="profileLV" HorizontalAlignment="Center" Height="498" VerticalAlignment="Top" Width="420" Background="#00E9E9EA">
+                    <Grid>
+                        <Image Source="/Background.png" Height="187" Width="187" Margin="20,0,0,0"></Image>
+                    </Grid>
+                </ListBox>
+            </controls:PanoramaItem>-->
         </controls:Panorama>
     </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar>
+            <shell:ApplicationBarIconButton Text="Send Message" IconUri="/Assets/AppBar/add.png" Click="ApplicationBarIconButton_Click"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="Ask question" Click="ApplicationBarMenuItem_Click" />
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

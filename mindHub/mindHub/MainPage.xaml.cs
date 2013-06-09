@@ -10,6 +10,9 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using mindHub.Models;
+using Microsoft.Phone.Net;
+using Microsoft.Phone.Net.NetworkInformation;
 
 namespace mindHub
 {
@@ -21,17 +24,44 @@ namespace mindHub
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(uNametxt.Text) && string.IsNullOrWhiteSpace(passtxt.Text))
+            var networkAvailable = NetworkInterface.GetIsNetworkAvailable();
+            if (networkAvailable)
             {
-                MessageBox.Show("Please complete all informations needed");
+                if (string.IsNullOrWhiteSpace(uNametxt.Text))
+                {
+                    MessageBox.Show("Please complete all informations needed");
+                }
+                else
+                {
+
+                    var loginOk = from login in App.MobileService.GetTable<LoginInfo>()
+                                  where login.UserName == uNametxt.Text && login.Password == passtxt.Password
+                                  select login;
+
+                    var loginList = await loginOk.ToListAsync();
+                    var cred = loginList.FirstOrDefault();
+                    if (cred != null)
+                    {
+                        NavigationService.Navigate(new Uri("/HomePage/HomePage.xaml", UriKind.Relative));
+                        this.NavigationService.RemoveBackEntry();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error logging in");
+                    }
+                }
             }
             else
             {
-                NavigationService.Navigate(new Uri("/HomePage/HomePage.xaml", UriKind.Relative));
-
+                MessageBox.Show("No internet connection!");
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("/SignUpPage.xaml", UriKind.Relative));
         }
     }
 }
